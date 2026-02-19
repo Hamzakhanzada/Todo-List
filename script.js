@@ -74,4 +74,20 @@ function deleteTodo(id) {
   renderTodos();
 }
 
+document.getElementById("all").onclick = function() {
+  filter = "all";
+  renderTodos();
+};
+
+document.getElementById("active").onclick = function() {
+  filter = "active";
+  renderTodos();
+};
+
+document.getElementById("completed").onclick = function() {
+  filter = "completed";
+  renderTodos();
+};
+
+
 
