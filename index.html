@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Todo App</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex justify-center pt-20">
+
+  <div class="w-[500px] bg-white shadow-xl rounded">
+
+    <!-- Header -->
+    <div class="p-5 border-b">
+      <h1 class="text-3xl font-light text-gray-400">What needs to be done?</h1>
+      <input 
+        id="todo-input"
+        type="text"
+        placeholder="Add a todo..."
+        class="w-full mt-4 p-2 border rounded outline-none"
+      />
+    </div>
+
+    <!-- Todo List -->
+    <ul id="todo-list"></ul>
+
+    <!-- Footer -->
+    <div class="flex justify-between items-center p-4 text-sm text-gray-500 border-t">
+      <span id="items-left">0 items left</span>
+      <div class="space-x-3">
+        <button id="all" class="filter-btn border px-2 rounded">All</button>
+        <button id="active" class="filter-btn px-2">Active</button>
+        <button id="completed" class="filter-btn px-2">Completed</button>
+      </div>
+      <button id="clear-completed">Clear completed</button>
+    </div>
+
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>
