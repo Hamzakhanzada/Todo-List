@@ -15,17 +15,19 @@ const clearCompletedBtn = document.getElementById("clear-completed");
 
 input.addEventListener("keypress", function(e) {
     if (e.key === "Enter" && input.value.trim() !== "") {
-        todos.push({
+
+        const newTodo = {
             id: Date.now(),
-            text:input.value,
+            text: input.value.trim(),
             completed: false,
-        })
+        };
+
+        todos.push(newTodo);
+        input.value = "";
+        renderTodos();
     }
-    todos.push(newTodo);
-    input.value = ""
-    renderTodos();
-    
-})
+});
+
 
 function renderTodos() {
   list.innerHTML = "";
