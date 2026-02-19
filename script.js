@@ -61,4 +61,17 @@ function renderTodos() {
   updateCount();
 }
 
+function toggleTodo(id) {
+  todos = todos.map(todo =>
+    todo.id === id ? { ...todo, completed: !todo.completed } : todo
+  );
+
+  renderTodos();
+}
+
+function deleteTodo(id) {
+  todos = todos.filter(todo => todo.id !== id);
+  renderTodos();
+}
+
 
