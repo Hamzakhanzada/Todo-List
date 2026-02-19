@@ -89,5 +89,15 @@ document.getElementById("completed").onclick = function() {
   renderTodos();
 };
 
+function updateCount() {
+  const activeCount = todos.filter(t => !t.completed).length;
+  itemsLeft.textContent = `${activeCount} item${activeCount !== 1 ? "s" : ""} left`;
+}
+
+document.getElementById("clear-completed").onclick = function() {
+  todos = todos.filter(t => !t.completed);
+  renderTodos();
+};
+
 
 
